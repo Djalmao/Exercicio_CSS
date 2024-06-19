@@ -1,0 +1,135 @@
+* {
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    /*Esse bloco é chamamdo de "reset". Interessante mantê-lo no incíio do código CSS.
+    Informa ao navegador o tamanho padrão que se quer para os boxes da página.*/
+}   
+
+body > header {
+    background-color: #2f3640; /*Define a cor de fundo apenas do título. Caso use apenas o "header" genérico (abaixo do body),
+                                tudo que estiver dentro dos "headers" que estão níveis abaixo vai ficar com a cor fundo definida.*/
+    padding: 16px 0; /*Adiciona um espaçamento ao cabeçalho.*/
+    color:antiquewhite;
+}
+
+header .container {
+    display: flex; /*Os botões do menu ficam ao lado do cabeçalho/título.*/
+    align-items: center; /*Para alinhar o menu com o cabeçalho.*/
+    justify-content: space-between; /*Para distribuir o espaço entre o cabeçalho e o menu, fazendo com que um fique na extrema direita
+                                    e o outro na extrema esquera.*/
+}
+
+/*Para organizar a página*/
+/*Começando pelo cabeçalho*/
+header li {
+    display: inline; /*Coloca os botões um do lado do outro, ou seja, a função "display" configura a forma como elemento será exibido.
+                    "display: block" para exibir em blocos e "display: none" para não exibir os elementos. */
+    font-family: Arial, Helvetica, sans-serif; /*Para alterar a fonte dos botões do menu.*/
+    font-weight: bold;
+    margin-left: 16px;
+}
+
+header li a { /*Define a cor de fundo apenas do menu.*/
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+.container { /*Centraliza o conteúdo.*/
+    width: 1349px;
+    margin: 0 auto; /*Além de organizar as margens esquerda e superior, servem também para as margens da direita e inferior.*/
+}
+
+.articles {
+    display: flex;
+    flex-wrap: wrap; /*Para inserir uma quarta notícia em outra linha.*/
+    justify-content: space-between; /*Para distribuir o espaço restante (10%) igualitariamente.*/
+}
+
+.articles article img { /*Para ajustar o tamanho da imagem. Definindo a altura, a largura é automática.*/
+    /*height: 180px;*/
+    width: 100%; /*Para alinhar a imagem com o texto.*/
+}
+
+.articles article { /*Para trabalhar com 3 notícias por linha, usa-se 30%, deixando os 3% para as margens.*/
+    width: 30%;
+}
+
+section { /*Para utilizar o mesmo espaçamento do cabeçalho nas seções.*/
+    padding: 16px 0;
+}
+
+section h2 { /*Para inserir uma margem inferior nos títulos das seções.*/
+    margin-bottom: 16px; 
+}
+
+.articles article h3 { /*Para inserir uma margem superior e inferior nos textos.*/
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.articles article a { /*Para dar ao link um aspecto de botão.*/
+    background-color: blue;
+    color:aliceblue;
+    padding: 8px;
+    display: inline-block; /*Para que o botão fique bem abaixo do texto, evitando sobreposição de conteúdo.*/
+    text-decoration: none; /*Para remover o underline do botão de link.*/
+    font-weight: bold; /*Para o texto do botão de link mais ou menos cheio.*/
+    margin-top: 8px;
+}
+
+.articles article a:hover { /*Para ao passar o mouse sobre o botão de link, que apareça o underline.*/
+    text-decoration: underline;
+}
+
+.articles article p, /*Para alterar a fonte dos parágrafos.*/ 
+.articles article a { /*Para alterar a fonte dos botões de link.*/ 
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.articles article h3 {
+    font-size: 24px;
+}
+
+section h2 {
+    font-size: 36px;
+}
+
+#sports { /*Para costumizar apenas a seção de esportes. O 0.1 corresponde a 10% do 255.*/
+    background-color: rgba(0, 255, 0, 0.1);
+}
+
+#sports .articles article a { /*Para costumizar apenas os botões de link da seção de esportes.*/
+    background-color: rgba(0, 255, 0, 0.8);
+    color:aliceblue;
+}
+
+#economy {
+    background-color: #f8f59f;
+}
+
+#economy .articles article a {
+    background-color: #ff9f1a;
+}
+
+.articles article p {
+    text-align: justify;
+}
+
+#entertainment {
+    background-color: rgb(127, 240, 255);
+}
+
+#entertainment .articles article a {
+    background-color: rgb(0, 151, 252);
+    color: aliceblue ;
+}
+
+#tecnology {
+    background-color: rgb(182, 187, 187);
+}
+
+#tecnology .articles article a {
+    background-color: darkslateblue;
+    color: aliceblue;
+}
